@@ -33,6 +33,7 @@ Ruby lib/main.rb
 > ly 
 > m -> (y){y*2}
 > a 10
+> x
 > u
 > i
 > type 
