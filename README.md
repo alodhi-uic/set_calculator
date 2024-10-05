@@ -39,3 +39,7 @@ Ruby lib/main.rb
 > type 
 > q
 ```
+
+## Terminal Screenshot
+
+![Terminal Screenshot](Terminal SS.png)
