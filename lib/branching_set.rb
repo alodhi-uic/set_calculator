@@ -37,11 +37,16 @@ class BranchingSet < DoubleSet
   end
 
   def to_s
+    puts "root: #{@root.value}"
     inorder(@root).join(", ")
   end
 
   def elements
     inorder(@root)
+  end
+
+  def type
+    "Branching" # Return the type of the set
   end
 
   private

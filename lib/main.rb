@@ -22,31 +22,37 @@ class SetCalculator
         @y = ArrayedSet.new
         values.each { |val| @y.add(val) }
 
-        # Display Both Sets - working
+        # Display Both Sets
+      when "l"
+        @x.display
+        @y.display
       when "lx"
         @x.display
       when "ly"
         @y.display
 
-        # Add number to Branching Set X - working
+        # Add number to Branching Set X
       when /^a (.*)$/
         number = $1.to_i
         @x.add(number)
 
-        # Swap both sets - working
+        # Swap both sets
       when "x"
         swap(@x, @y)
 
-        # -------------------------------------------------------------------------------------#
-        # Union both sets - working
+        # Union
       when "u"
         union(@x, @y)
-        # Intersection both sets - working
+        # Intersection
       when "i"
         intersection(@x, @y)
       when 'c'
         # Call copy method from functions.rb
-        copy(@x, @y)
+        @y = Marshal.load(Marshal.dump(@x))
+        # @y = @x.class.new(@x.set)
+      when "type"
+        puts "Set X -> Type: #{@x.type}"
+        puts "Set Y -> Type: #{@y.type}"
       when "q"
         @x.display
         @y.display
@@ -59,10 +65,14 @@ class SetCalculator
 
   private
 
+
+
   # This method evaluates the lambda expression and applies it to each element in Set X
 end
 
 calculator = SetCalculator.new
 calculator.run
+
+
 
 

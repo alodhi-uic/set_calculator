@@ -25,4 +25,8 @@ class ArrayedSet < DoubleSet
   def elements
     @elements.dup
   end
+
+  def type
+    "Arrayed" # Return the type of the set
+  end
 end
