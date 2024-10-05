@@ -1,43 +1,40 @@
-# SetCalculator
+# Set Calculator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/set_calculator`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Ruby-based Set Calculator application allows you to perform set operations on two sets, X and Y. Set X is implemented as a Binary Search Tree (BST) through the `BranchingSet` class, while set Y is implemented as a sorted array using the `ArrayedSet` class. The calculator offers various commands to manipulate and view these sets, as well as perform operations like union, intersection, and more.
 
-TODO: Delete this and the text above, and describe your gem
+## Features
 
-## Installation
+- **Binary Search Tree (BST)** for set X.
+- **Sorted array** for set Y.
+- Supports operations like **swap**, **union**, **intersection**, and applying **lambda expressions** to set elements.
+- **No duplicates** allowed in either set.
+- **Semantic equivalence** is used for comparison, ensuring numbers with the same value (even if different representations) are treated as equal.
 
-Add this line to your application's Gemfile:
+## Requirements
 
-```ruby
-gem 'set_calculator'
+- Ruby 2.5 or higher.
+
+## Setup Instructions
+
+1. Clone this repository.
+2. Navigate to the project folder. `~/set_calculator`
+3. Run the main Ruby script:
+
+```bash
+Ruby lib/main.rb
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install set_calculator
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/set_calculator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the SetCalculator project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/set_calculator/blob/master/CODE_OF_CONDUCT.md).
+## Commands
+```bash
+> X 1,2,3,4 
+> Y 11,22,33,44
+> l
+> lx
+> ly 
+> m -> (y){y*2}
+> a 10
+> u
+> i
+> type 
+> q
+```
